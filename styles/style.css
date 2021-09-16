@@ -93,3 +93,36 @@ body {
   color: #717171;
   line-height: 26px;
 }
+
+.main-section {
+  margin-top: 46px;
+  padding: 0 28px;
+}
+
+h4 {
+  padding: 16px 0;
+  font-weight: 800;
+}
+p {
+  font-size: 18px;
+}
+
+pre {
+  margin: 16px 0;
+  background-color: #686c8a;
+  color: white;
+  font-size: 18;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .side-menu {
+    display: none;
+  }
+
+  .container .main-content {
+    width: 100%;
+    margin: 6px;
+  }
+}

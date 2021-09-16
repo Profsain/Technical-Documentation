@@ -13,11 +13,12 @@
         <nav id="navbar">
           <h2>React Documentation</h2>
           <ul>
-            <li><a href="#" class="nav-link">Getting Started</a></li>
-            <li><a href="#" class="nav-link">Hello World</a></li>
-            <li><a href="#" class="nav-link">Introducing JSX</a></li>
-            <li><a href="#" class="nav-link">Component & Props</a></li>
-            <li><a href="#" class="nav-link">State & Lifecycle</a></li>
+            <li><a href="#getting-started" class="nav-link">Getting Started</a></li>
+            <li><a href="#hello-world" class="nav-link">Hello World</a></li>
+            <li><a href="#introducing-jsx" class="nav-link">Introducing JSX</a></li>
+            <li><a href="#rendering-elements" class="nav-link">Rendering Elements</a></li>
+            <li><a href="#component-props" class="nav-link">Component & Props</a></li>
+            <li><a href="state-lifecycle" class="nav-link">State & Lifecycle</a></li>
             <li><a href="#" class="nav-link">Handling event</a></li>
             <li><a href="#" class="nav-link">conditional Rendering</a></li>
             <li><a href="#" class="nav-link">Lists & keys</a></li>
@@ -36,12 +37,201 @@
         <div class="main-header"><h2>Welcome!! Enjoy Coding.</h2></div>
         <div class="content">
           <main id="main-doc">
-            <p>Several section are contained in the main page</p>
-            <p>Several section are contained in the main page</p>
-            <p>Several section are contained in the main page</p>
-            <p>Several section are contained in the main page</p>
-            <p>Several section are contained in the main page</p>
-            <p>Several section are contained in the main page</p>
+            <!-- Getting started section -->
+            <section class="main-section" id="getting-started">
+              <h2>Getting Started</h2>
+              <h4>What is React</h4>
+              <p>
+                React is a JavaScript library created by Facebook.React is a
+                tool for building UI components.
+              </p>
+              <h4>How Does React Work</h4>
+              <p>
+                React creates a VIRTUAL DOM in memory. Instead of manipulating
+                the browser's DOM directly, React creates a virtual DOM in
+                memory, where it does all the necessary manipulating, before
+                making the changes in the browser DOM.
+              </p>
+              <p>
+                React only changes what needs to be changed! React finds out
+                what changes have been made, and changes only what needs to be
+                changed. You will learn the various aspects of how React does
+                this in the rest of this tutorial.
+              </p>
+              <h4>History of React.js</h4>
+              <ul>
+                <li>Current version of React.JS is V16.8.6 (March 2019).</li>
+                <li>
+                  Initial Release to the Public (V0.3.0) was in July 2013.
+                </li>
+                <li>
+                  React.JS was first used in 2011 for Facebook's Newsfeed
+                  feature.
+                </li>
+                <li>Facebook Software Engineer, Jordan Walke, created it.</li>
+                <li>
+                  The create-react-app version 2.0 package was released in
+                  October 2018.
+                </li>
+                <li>
+                  Create-react-app version 2.0 supports Babel 7, webpack 4, and
+                  Jest23.
+                </li>
+              </ul>
+              <h4>Setting up a React.js Environment</h4>
+              <p>
+                If you have NPM and Node.js installed, you can create a React
+                application by first installing the create-react-app.
+              </p>
+              <p>
+                Install create-react-app by running this command in your
+                terminal:
+              </p>
+              <code>C:\Users\Your Name>npm install -g create-react-app</code>
+              <p>Congratulation. You Rock!</p>
+            </section>
+
+            <section class="main-section" id="hello-world">
+              <h2>Hello World</h2>
+              <p>The smallest React example looks like this:</p>
+              <pre>
+                <code>
+                  ReactDom.render(
+                    &lt;h1&gt;Hello, World &lt;/h1&gt;
+                    document.getElementById('root')
+                  );
+                </code>
+              </pre>
+            </section>
+
+            <!-- Introduction to JSX section -->
+            <section class="main-section" id="introducing-jsx">
+              <h2>Introducing React JSX</h2>
+              <p>Consider this variable declaration:</p>
+              <pre>
+                <code>
+                  cont element = &lt;h2&gt;Hello, Profsain &lt;/h2&gt;;
+                </code>
+              </pre>
+              <p>This funny tag syntax is neither a string nor HTML.</p>
+              <p>
+                It is called JSX, and it is a syntax extension to JavaScript. We
+                recommend using it with React to describe what the UI should
+                look like. JSX may remind you of a template language, but it
+                comes with the full power of JavaScript.
+              </p>
+              <h4>Why React JSX</h4>
+              <p>
+                React embraces the fact that rendering logic is inherently
+                coupled with other UI logic: how events are handled, how the
+                state changes over time, and how the data is prepared for
+                display.
+              </p>
+              <p>
+                Instead of artificially separating technologies by putting
+                markup and logic in separate files, React separates concerns
+                with loosely coupled units called “components” that contain
+                both. We will come back to components in a further section, but
+                if you’re not yet comfortable putting markup in JS, this talk
+                might convince you otherwise.
+              </p>
+              <h4>Embedding Expressions in JSX</h4>
+              <p>
+                In the example below, we declare a variable called name and then
+                use it inside JSX by wrapping it in curly braces:
+              </p>
+              <pre>
+                <code>
+                  const name = 'Profsain Husain';
+                  const element = &lt;h2&gt;Hello, {name}&lt;/h2&gt;;
+
+                  ReactDom.render(
+                    element,
+                    document.getElementById('root')
+                  );
+                </code>
+              </pre>
+              <p>
+                You can put any valid JavaScript expression inside the curly
+                braces in JSX. For example, 2 + 2, user.firstName, or
+                formatName(user) are all valid JavaScript expressions.
+              </p>
+            </section>
+
+            <!-- Rendering Elements section -->
+            <section class="main-section" id="rendering-elements">
+              <h2>Rendering Elements</h2>
+              <p>
+                Elements are the smallest building blocks of React apps. An
+                element describes what you want to see on the screen:
+              </p>
+              <pre>
+                <code>
+                  const element = &lt;p&gt;Welcome to React.js&lt;/p&gt;;
+                </code>
+              </pre>
+              <p>
+                Unlike browser DOM elements, React elements are plain objects,
+                and are cheap to create. React DOM takes care of updating the
+                DOM to match the React elements.
+              </p>
+              <h4>Rendering an Element into the DOM</h4>
+              <p>Let’s say there is a <div> somewhere in your HTML file:</p>
+                <pre>
+                  <code>
+                    &lt;div id="root"&gt;&lt;/div&gt;
+                  </code>
+                </pre>
+                <p>We call this a “root” DOM node because everything inside it will be managed by React DOM.</p>
+                <p>Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.</p>
+                <p>To render a React element into a root DOM node, pass both to ReactDOM.render():</p>
+                <pre>
+                  <code>
+                    const element = &lt;h2&gt;I love React &lt;/h2&gt;;
+                    ReactDom.render(element, document.getElementById('root'));
+                  </code>
+                </pre>
+            </section>
+
+            <!-- Component and Props section -->
+            <section class="main-section" id="component-props">
+              <h2>Component and Props</h2>
+              <p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components.</p>
+              <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+              <h4>Functional and Class Components</h4>
+              <p>he simplest way to define a component is to write a JavaScript function:</p>
+              <pre>
+                <code>
+                  function welcome(props) {
+                    return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+                  }
+                </code>
+              </pre>
+              <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.</p>
+            </section>
+
+            <!-- State and Lifecycle section -->
+            <section class="main-section" id="state-lifecycle">
+              <h2>State and Lifecycle</h2>
+              <p>Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call ReactDOM.render() to change the rendered output:</p>
+              <pre>
+                <code>
+                  function tick() {
+                    const element = (
+                      &lt;div&gt;
+                        &lt;h1&gt;Hello, Profsain &lt;/h1&gt;
+                        &lt;h2&gt;It is {new Date.toLocalTimeString()}.&lt;/h2&gt;
+                      &lt;/div&gt;
+                    );
+                    ReactDom.render(
+                      element,
+                      document.getElementById('root')
+                    );
+                  }
+                  SetInterval(tick, 1000);
+                </code>
+              </pre>
+            </section>
           </main>
         </div>
       </div>
